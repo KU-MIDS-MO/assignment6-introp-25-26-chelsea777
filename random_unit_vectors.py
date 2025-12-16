@@ -1,7 +1,6 @@
+import numpy as np
 def random_unit_vectors(num_vectors, dim):
-    """
-    Replace the code below with your own implementation.
-    """
-    ### Replace with your own code (begin) ###
-    pass
-    ### Replace with your own code (end)   ###
+    m = np.random.randn(num_vectors,dim)
+    norms = np.linalg.norm(m,axis = 1)
+    u = m/norms[:,np.newaxis]
+    return u
